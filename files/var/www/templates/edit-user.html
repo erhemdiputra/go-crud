@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Edit User</title>
+    </head>
+    <body>
+        <h3>Edit User</h3>
+        <a href="/view/user/list">User List</a>
+        <form method="POST" action="/view/user/edit">
+            <input type="hidden" name="id" value="{{.user.ID}}" />
+            <table>
+                <tr>
+                    <td>Name : </td>
+                    <td><input type="text" name="name" value="{{.user.Name}}" /> </td>
+                </tr>
+                <tr>
+                    <td>Age : </td>
+                    <td><input type="text" name="age" value="{{.user.Age}}" /></td>
+                </tr>
+            </table>
+
+            <input type="submit" />
+        </form>
+    </body>
+</html>

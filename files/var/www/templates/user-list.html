@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>User List</title>
+    </head>
+    <body>
+        <a href="/view/user/add">Add User</a>
+        <br/><br/>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Action</td>
+            </tr>
+            {{range .userList}}
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.Name}}</td>
+                <td>{{.Age}}</td>
+                <td>
+                    <a href="/view/user/edit/{{.ID}}">Edit</a>
+                    <a href="/view/user/delete/{{.ID}}">Delete</a>
+                </td>
+            </tr>
+            {{end}}
+        </table>    
+    </body>
+</html>
